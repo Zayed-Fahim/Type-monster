@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body class="container">
+    <header>
+        <h1 class="text-center mt-4 text-decoration-underline">JavaScript Blog!!</h1>
+    </header>
+    <main>
+        <section class="mt-5">
+            <div>
+                <h3>1.Local Storage VS Session Storage.</h3>
+                <table class="table table-bordered border-primary mt-3 text-center">
+                    <thead>
+                        <tr>
+                            <th class="col-6">Local Storage</th>
+                            <th class="col-6">Session Storage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The storage capacity of local storage is 5MB/10MB</td>
+                            <td>The storage capacity of session storage is 5MB</td>
+                        </tr>
+                        <tr>
+                            <td>As it is not session-based, it must be deleted via javascript or manually</td>
+                            <td>It’s session-based and works per window or tab. This means that data is stored only for the duration of a session, i.e.,
+                            until the browser (or tab) is closed</td>
+                        </tr>
+                        <tr>
+                            <td>The client can only read local storage</td>
+                            <td>The client can only read local storage</td>
+                        </tr>
+                        <tr>
+                            <td>There is no transfer of data to the server</td>
+                            <td>There is no transfer of data to the server</td>
+                        </tr>
+                        <tr>
+                            <td>There are fewer old browsers that support it</td>
+                            <td>There are fewer old browsers that support it</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="mt-5">
+            <div>
+                <h3>2.Global Scope VS Block Scope</h3>
+                <p class="fs-5">
+                    <strong>Global variables</strong> are useful for values that are relatively constant, or that many functions in the script must access,
+                    such as a session id. <strong>A block variable</strong>, however, has a limited scope: it exists only within the block that it is
+                    declared in. Once that block ends, the variable is destroyed and its values lost .
+                </p>
+            </div>
+        </section>
+        <section class="mt-5">
+            <div>
+                <h3>3.What is javascript event loop?</h3>
+                <p class="fs-5">
+                    <strong>The event loop</strong> is an architectural design pattern that allows code to run <strong>asynchronously</strong> on the javascript engines and
+                    makes it possible for code to execute <strong>blocking instructions first</strong> and when available execute <strong>asynchronous functions</strong>. <strong>JavaScript</strong> has a runtime model based on an event loop, which is responsible for executing the code, collecting and
+                    processing events, and executing queued sub-tasks. This model is quite different from models in other languages like <strong>C</strong>
+                    and <strong>Java</strong>.
+                </p>
+            </div>
+        </section>
+        <section class="mt-5">
+            <div>
+                <h3>3.How many ways to get undefined?</h3>
+                <p class="fs-5">
+                    Undefined is also a primitive value in JavaScript. A variable or an object has an undefined value when no value is
+                    assigned before using it. So you can say that undefined means lack of value or unknown value.
+                    <img class="w-100 mt-2 mb-2" src="./images/example-1.png" alt="">
+                    In the above example, we have not assigned any value to a variable named 'myVar'. A variable 'myVar' lacks a value. So
+                    it is undefined.
+                    You will get undefined value when you call a non-existent property or method of an object. <br><br>
+                    <strong>Note:</strong>undefined is a token. typeof undefined will return undefined not an object. <br> <br>
+                    <img class="w-100 mt-2 mb-2" src="./images/example-2.png" alt="">
+                    In the above example, a function Sum does not return any result but still we try to assign its resulted value to a
+                    variable. So in this case, result will be undefined.
+                    
+                    If you pass less arguments in function call then, that parameter will have undefined value.
+                    <img class="w-100 mt-2 mb-2" src="./images/example-3.png" alt="">
+                    An undefined evaluates to false when used in conditional expression.
+                    <img class="w-100 mt-2 mb-2" src="./images/example-4.png" alt="">
+                    undefined is one of the main reasons to produce a runtime error in the JavaScript application. This happens if
+                    you don't check the value of unknown return variables before using it. If you are not sure that a variable will always
+                    have some value, the best practice is to check the value of variables for undefined before using them.
+                </p>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+</html>
