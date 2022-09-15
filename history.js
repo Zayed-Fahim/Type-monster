@@ -2,12 +2,12 @@ const histories = document.getElementById("histories");
 
 function addHistory(questionText, timeTaken, errorCount) {
   const newRow = document.createElement("div");
-  newRow.classList.add("card");
+  newRow.classList.add("card", "displayHistory");
 
   newRow.innerHTML = `
   <h3>${questionText}</h3>
-  <div class="grid">
-  <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
+  <div>
+  <p>You took: <span class="bold">${Math.round(timeTaken)}</span> seconds</p>
   <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
   </div>
   `;
@@ -31,7 +31,7 @@ function displayHistory() {
 
     newRow.innerHTML = `
   <h3>${test.questionText}</h3>
-  <p>You took: <span class="bold">${test.timeTaken}</span> seconds</p>
+  <p>You took: <span class="bold">${Math.round(test.timeTaken)}</span> seconds</p>
     <p>You made <span class="bold red">${test.errorCount}</span> mistakes</p>
   `;
 
